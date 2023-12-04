@@ -52,10 +52,6 @@ class FreePos
                     parkingSpaces[columnNumber - 1][spaceNumber - 1] = false; // Установка флага "свободно" для указанного места
                     Console.WriteLine($"Место {spaceNumber} на колонке {columnNumber} теперь свободно.");
                 }
-                else
-                {
-                    Console.WriteLine("Ошибка: Место уже свободно.");
-                }
             }
         }
         else
@@ -96,14 +92,16 @@ public class Client
         transactions = new List<Transaction>();    //Инициализация списка транзакций
     }
 
+    //Метод добавления транзакции
     public void AddTransaction(Transaction transaction)
     {
-        transactions.Add(transaction);             //Добавление транзакции
+        transactions.Add(transaction);             
     }
 
+    //Метод получения транзакции
     public List<Transaction> GetTransactions()
     {
-        return transactions;                       //Возвращение значения, записанного в transactions
+        return transactions;                       
     }
 
 }
@@ -128,8 +126,8 @@ class Program
         Client client = new Client();
 
         // добавление новых транзакций
-        client.AddTransaction(new Transaction { Date = DateTime.Now, Amount = 100, Description = "Пополнение счета" });                 
-        client.AddTransaction(new Transaction { Date = DateTime.Now.AddDays(-1), Amount = -50, Description = "Оплата за услуги" });
+        client.AddTransaction(new Transaction { Date = DateTime.Now, Amount = 100, Description = "Рублей -- Пополнение счета" });                 
+        client.AddTransaction(new Transaction { Date = DateTime.Now.AddDays(-1), Amount = -50, Description = "Рублей -- Оплата за услуги" });
 
        
         List<Transaction> transactions = client.GetTransactions();   // получение списка всех транзакций

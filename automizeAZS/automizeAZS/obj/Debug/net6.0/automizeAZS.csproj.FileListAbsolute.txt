@@ -1,0 +1,15 @@
+C:\Users\damir\Desktop\AutomizeAZS\automizeAZS\automizeAZS\bin\Debug\net6.0\automizeAZS.exe
+C:\Users\damir\Desktop\AutomizeAZS\automizeAZS\automizeAZS\bin\Debug\net6.0\automizeAZS.deps.json
+C:\Users\damir\Desktop\AutomizeAZS\automizeAZS\automizeAZS\bin\Debug\net6.0\automizeAZS.runtimeconfig.json
+C:\Users\damir\Desktop\AutomizeAZS\automizeAZS\automizeAZS\bin\Debug\net6.0\automizeAZS.dll
+C:\Users\damir\Desktop\AutomizeAZS\automizeAZS\automizeAZS\bin\Debug\net6.0\automizeAZS.pdb
+C:\Users\damir\Desktop\AutomizeAZS\automizeAZS\automizeAZS\obj\Debug\net6.0\automizeAZS.csproj.AssemblyReference.cache
+C:\Users\damir\Desktop\AutomizeAZS\automizeAZS\automizeAZS\obj\Debug\net6.0\automizeAZS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\damir\Desktop\AutomizeAZS\automizeAZS\automizeAZS\obj\Debug\net6.0\automizeAZS.AssemblyInfoInputs.cache
+C:\Users\damir\Desktop\AutomizeAZS\automizeAZS\automizeAZS\obj\Debug\net6.0\automizeAZS.AssemblyInfo.cs
+C:\Users\damir\Desktop\AutomizeAZS\automizeAZS\automizeAZS\obj\Debug\net6.0\automizeAZS.csproj.CoreCompileInputs.cache
+C:\Users\damir\Desktop\AutomizeAZS\automizeAZS\automizeAZS\obj\Debug\net6.0\automizeAZS.dll
+C:\Users\damir\Desktop\AutomizeAZS\automizeAZS\automizeAZS\obj\Debug\net6.0\refint\automizeAZS.dll
+C:\Users\damir\Desktop\AutomizeAZS\automizeAZS\automizeAZS\obj\Debug\net6.0\automizeAZS.pdb
+C:\Users\damir\Desktop\AutomizeAZS\automizeAZS\automizeAZS\obj\Debug\net6.0\automizeAZS.genruntimeconfig.cache
+C:\Users\damir\Desktop\AutomizeAZS\automizeAZS\automizeAZS\obj\Debug\net6.0\ref\automizeAZS.dll
