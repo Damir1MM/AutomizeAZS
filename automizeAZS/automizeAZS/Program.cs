@@ -112,6 +112,8 @@ class Program
 {
     static void Main(string[] args)
     {
+        //FreePos-------------------------------------------------------------------------------------------------------------
+
         FreePos freePos = new FreePos(); // Создание объекта автозаправочной станции
 
         freePos.CarArrived(1, 1); // Прибытие автомобиля на место 1 на бензиновой колонке 1
@@ -120,5 +122,22 @@ class Program
         freePos.PersonDetected(2, 1); // Обнаружение человека на месте 1 на бензиновой колонке 1
 
         freePos.PrintParkingStatus(); // Вывод статуса парковки
+
+        //Transaction---------------------------------------------------------------------------------------------------------
+
+        Client client = new Client();
+
+        
+        client.AddTransaction(new Transaction { Date = DateTime.Now, Amount = 100, Description = "Пополнение счета" });
+        client.AddTransaction(new Transaction { Date = DateTime.Now.AddDays(-1), Amount = -50, Description = "Оплата за услуги" });
+
+       
+        List<Transaction> transactions = client.GetTransactions();
+
+        
+        foreach (Transaction transaction in transactions)
+        {
+            Console.WriteLine("{0} {1} {2}", transaction.Date, transaction.Amount, transaction.Description);
+        }
     }
 }
