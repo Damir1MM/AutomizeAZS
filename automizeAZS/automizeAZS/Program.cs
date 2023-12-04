@@ -74,7 +74,7 @@ class FreePos
     }
 }
 
-// Transaction---------------------------------------------------------------------------------------------------------------------------
+// Transaction---------------------------------------------------------------------------------------------------------------------------\
 
 public class Transaction
 {
@@ -133,9 +133,12 @@ class Program
         List<Transaction> transactions = client.GetTransactions();   // получение списка всех транзакций
 
         // вывод списка транзакций
+        Console.WriteLine();
+        Console.WriteLine("История опираций:");
         foreach (Transaction transaction in transactions)
         {
-            Console.WriteLine("{0} {1} {2}", transaction.Date, transaction.Amount, transaction.Description);
+            Console.WriteLine();
+            Console.WriteLine("{0} | {1}  {2}", transaction.Date, transaction.Amount, transaction.Description);
         }
     }
 }
