@@ -31,9 +31,32 @@ class FreePos
             }
         }
     }
+
+    public void PrintParkingStatus()
+    {
+        Console.WriteLine("Статус парковки:");
+        for (int i = 0; i < parkingSpaces.Length; i++)
+        {
+            for (int j = 0; j < parkingSpaces[i].Length; j++)
+            {
+                string status = parkingSpaces[i][j] ? "Занято" : "Свободно";
+                Console.WriteLine($"Место {j + 1} на колонке {i + 1}: {status}");
+            }
+        }
+    }
 }
 
 class Program
 {
+    static void Main(string[] args)
+    {
+        FreePos freePos = new FreePos();
 
+        freePos.CarArrived(1, 1);
+        freePos.CarArrived(4, 2);
+
+
+        freePos.PrintParkingStatus();
+    }
 }
+
