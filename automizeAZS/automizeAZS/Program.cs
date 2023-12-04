@@ -1,6 +1,6 @@
 ﻿using System;
 
-//FreePos
+//FreePos-----------------------------------------------------------------------------------------------------------------------------------------
 class FreePos
 {
     bool[][] parkingSpaces; // Массив для хранения информации о свободных и занятых местах
@@ -78,7 +78,7 @@ class FreePos
     }
 }
 
-// Transaction 
+// Transaction----------------------------------------------------------------------------------------------------------------------------
 
 public class Transaction
 {
@@ -91,7 +91,21 @@ public class Client
 {
     private List<Transaction> transactions;
 
-    
+    public Client()
+    {
+        transactions = new List<Transaction>();
+    }
+
+    public void AddTransaction(Transaction transaction)
+    {
+        transactions.Add(transaction);
+    }
+
+    public List<Transaction> GetTransactions()
+    {
+        return transactions;
+    }
+
 }
 
 class Program
