@@ -82,28 +82,28 @@ class FreePos
 
 public class Transaction
 {
-    public DateTime Date { get; set; }
-    public decimal Amount { get; set; }
-    public string Description { get; set; }
+    public DateTime Date { get; set; }              //Дата транзакции
+    public decimal Amount { get; set; }             //Сумма(кол-во рублей) транзакции
+    public string Description { get; set; }         //Описание транзакции
 }
 
 public class Client
 {
-    private List<Transaction> transactions;
+    private List<Transaction> transactions;         //Список транзакций
 
     public Client()
     {
-        transactions = new List<Transaction>();
+        transactions = new List<Transaction>();    //Инициализация списка транзакций
     }
 
     public void AddTransaction(Transaction transaction)
     {
-        transactions.Add(transaction);
+        transactions.Add(transaction);             //Добавление транзакции
     }
 
     public List<Transaction> GetTransactions()
     {
-        return transactions;
+        return transactions;                       //Возвращение значения, записанного в transactions
     }
 
 }
@@ -127,14 +127,14 @@ class Program
 
         Client client = new Client();
 
-        
-        client.AddTransaction(new Transaction { Date = DateTime.Now, Amount = 100, Description = "Пополнение счета" });
+        // добавление новых транзакций
+        client.AddTransaction(new Transaction { Date = DateTime.Now, Amount = 100, Description = "Пополнение счета" });                 
         client.AddTransaction(new Transaction { Date = DateTime.Now.AddDays(-1), Amount = -50, Description = "Оплата за услуги" });
 
        
-        List<Transaction> transactions = client.GetTransactions();
+        List<Transaction> transactions = client.GetTransactions();   // получение списка всех транзакций
 
-        
+        // вывод списка транзакций
         foreach (Transaction transaction in transactions)
         {
             Console.WriteLine("{0} {1} {2}", transaction.Date, transaction.Amount, transaction.Description);
