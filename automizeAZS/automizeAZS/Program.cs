@@ -29,6 +29,37 @@ class FreePos
                     Console.WriteLine($"Место {spaceNumber} на колонке {columnNumber} теперь занято.");
                 }
             }
+            else
+            {
+                Console.WriteLine("Ошибка: Неправильный номер места.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Ошибка: Неправильный номер колонки.");
+        }
+    }
+
+    public void PersonDetected(int columnNumber, int spaceNumber)
+    {
+        if (columnNumber >= 1 && columnNumber <= parkingSpaces.Length)
+        {
+            if (spaceNumber >= 1 && spaceNumber <= parkingSpaces[columnNumber - 1].Length)
+            {
+                if (parkingSpaces[columnNumber - 1][spaceNumber - 1])
+                {
+                    parkingSpaces[columnNumber - 1][spaceNumber - 1] = false;
+                    Console.WriteLine($"Место {spaceNumber} на колонке {columnNumber} теперь свободно.");
+                }
+                else
+                {
+                    Console.WriteLine("Ошибка: Место уже свободно.");
+                }
+            }
+        }
+        else
+        {
+            Console.WriteLine("Ошибка: Неправильный номер колонки.");
         }
     }
 
@@ -55,8 +86,8 @@ class Program
         freePos.CarArrived(1, 1);
         freePos.CarArrived(4, 2);
 
+        freePos.PersonDetected(2, 1);
 
         freePos.PrintParkingStatus();
     }
 }
-
