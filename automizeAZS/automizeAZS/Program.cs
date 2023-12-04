@@ -1,5 +1,6 @@
 ﻿using System;
 
+//FreePos-----------------------------------------------------------------------------------------------------------------------------------------
 class FreePos
 {
     bool[][] parkingSpaces; // Массив для хранения информации о свободных и занятых местах
@@ -51,10 +52,6 @@ class FreePos
                     parkingSpaces[columnNumber - 1][spaceNumber - 1] = false; // Установка флага "свободно" для указанного места
                     Console.WriteLine($"Место {spaceNumber} на колонке {columnNumber} теперь свободно.");
                 }
-                else
-                {
-                    Console.WriteLine("Ошибка: Место уже свободно.");
-                }
             }
         }
         else
@@ -77,10 +74,44 @@ class FreePos
     }
 }
 
+// Transaction---------------------------------------------------------------------------------------------------------------------------
+
+public class Transaction
+{
+    public DateTime Date { get; set; }              //Дата транзакции
+    public decimal Amount { get; set; }             //Сумма(кол-во рублей) транзакции
+    public string Description { get; set; }         //Описание транзакции
+}
+
+public class Client
+{
+    private List<Transaction> transactions;         //Список транзакций
+
+    public Client()
+    {
+        transactions = new List<Transaction>();    //Инициализация списка транзакций
+    }
+
+    //Метод добавления транзакции
+    public void AddTransaction(Transaction transaction)
+    {
+        transactions.Add(transaction);             
+    }
+
+    //Метод получения транзакции
+    public List<Transaction> GetTransactions()
+    {
+        return transactions;                       
+    }
+
+}
+
 class Program
 {
     static void Main(string[] args)
     {
+        //FreePos--------------------------------------------------------------------------------------------------------------
+
         FreePos freePos = new FreePos(); // Создание объекта автозаправочной станции
 
         freePos.CarArrived(1, 1); // Прибытие автомобиля на место 1 на бензиновой колонке 1
@@ -89,5 +120,22 @@ class Program
         freePos.PersonDetected(2, 1); // Обнаружение человека на месте 1 на бензиновой колонке 1
 
         freePos.PrintParkingStatus(); // Вывод статуса парковки
+
+        //Transaction----------------------------------------------------------------------------------------------------------
+
+        Client client = new Client();
+
+        // добавление новых транзакций
+        client.AddTransaction(new Transaction { Date = DateTime.Now, Amount = 100, Description = "Рублей -- Пополнение счета" });                 
+        client.AddTransaction(new Transaction { Date = DateTime.Now.AddDays(-1), Amount = -50, Description = "Рублей -- Оплата за услуги" });
+
+       
+        List<Transaction> transactions = client.GetTransactions();   // получение списка всех транзакций
+
+        // вывод списка транзакций
+        foreach (Transaction transaction in transactions)
+        {
+            Console.WriteLine("{0} {1} {2}", transaction.Date, transaction.Amount, transaction.Description);
+        }
     }
 }

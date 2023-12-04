@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\damir\\Desktop\\AutoAZS\\AutomizeAZS\\automizeAZS\\automizeAZS\\automizeAZS.csproj",
+      "projectUniqueName": "C:\\Users\\damir\\Desktop\\AutomizeAZS\\automizeAZS\\automizeAZS\\automizeAZS.csproj",
       "projectName": "automizeAZS",
-      "projectPath": "C:\\Users\\damir\\Desktop\\AutoAZS\\AutomizeAZS\\automizeAZS\\automizeAZS\\automizeAZS.csproj",
+      "projectPath": "C:\\Users\\damir\\Desktop\\AutomizeAZS\\automizeAZS\\automizeAZS\\automizeAZS.csproj",
       "packagesPath": "C:\\Users\\damir\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\damir\\Desktop\\AutoAZS\\AutomizeAZS\\automizeAZS\\automizeAZS\\obj\\",
+      "outputPath": "C:\\Users\\damir\\Desktop\\AutomizeAZS\\automizeAZS\\automizeAZS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\damir\\AppData\\Roaming\\NuGet\\NuGet.Config",
