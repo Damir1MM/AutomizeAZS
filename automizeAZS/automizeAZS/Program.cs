@@ -1,5 +1,6 @@
 ﻿using System;
 
+//FreePos
 class FreePos
 {
     bool[][] parkingSpaces; // Массив для хранения информации о свободных и занятых местах
@@ -75,6 +76,22 @@ class FreePos
             }
         }
     }
+}
+
+// Transaction 
+
+public class Transaction
+{
+    public DateTime Date { get; set; }
+    public decimal Amount { get; set; }
+    public string Description { get; set; }
+}
+
+public class Client
+{
+    private List<Transaction> transactions;
+
+    
 }
 
 class Program
